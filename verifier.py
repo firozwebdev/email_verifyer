@@ -195,8 +195,8 @@ class Verifier:
 
         # look for mx record and create a list of mail exchanges
         try:
-            # mx_record = resolver.query(lookup['address'].domain, 'MX')
-            mx_record = resolver.resolve(lookup['address'].domain, 'MX')
+            mx_record = resolver.query(lookup['address'].domain, 'MX')
+            # mx_record = resolver.resolve(lookup['address'].domain, 'MX')
             mail_exchangers = [exchange.to_text().split() for exchange in mx_record]
             lookup['host_exists'] = True
         except (resolver.NoAnswer, resolver.NXDOMAIN, resolver.NoNameservers):
