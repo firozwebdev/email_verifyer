@@ -37,7 +37,7 @@ try:
         email_message['Subject'] = f'Report email - {date_str}'
 
         # Attach the html doc defined earlier, as a MIMEText html content type to the MIME message
-        file_num = random.choice(range(0, 4))
+        file_num = random.choice(range(1, 5))
         html = html_template(file_num)
 
         email_message.attach(MIMEText(html, "html"))
