@@ -226,7 +226,7 @@ class Verifier:
 
 
 if __name__ == "__main__":
-    v = Verifier(source_addr='user@example.com')
+    v = Verifier(source_addr='hello@dmail.com')
     dt = pandas.read_csv('email.csv').to_dict()
     email = dt['Email']
     print("Verification is starting, Be patient")
